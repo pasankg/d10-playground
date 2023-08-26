@@ -1,0 +1,18 @@
+name: drupal-10-playground
+recipe: drupal10
+config:
+  webroot: .
+  xdebug: true
+  port: 3306
+services:
+  appserver:
+    build:
+      - composer self-update
+      - composer install
+  database:
+    type: mysql
+    portforward: true
+    creds:
+      user: root
+      password: root
+      database: d10-playground
