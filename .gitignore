@@ -42,3 +42,8 @@ sites/simpletest
 # simpletest
 
 composer
+/.editorconfig
+/.gitattributes
+web/core
+web/core/module/contrib
+web/core/theme/contrib
