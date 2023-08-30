@@ -44,5 +44,5 @@ web/sites/simpletest
 /.editorconfig
 /.gitattributes
 
-web/module/contrib
+web/modules/contrib
 web/theme/contrib
