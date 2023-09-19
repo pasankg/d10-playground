@@ -44,5 +44,10 @@ web/sites/simpletest
 /.editorconfig
 /.gitattributes
 
-web/modules/contrib
-web/theme/contrib
+web/modules/contrib/
+web/themes/contrib/
+
+.DS_Store
+.ddev/
+.idea/
+web/info.php

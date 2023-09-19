@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: PVw1CqINc8mdBO0v-gKzrhG9fd1pyKwx4wIXdks-k3w
+disabled: false
+field_template: false
+ft-default: default
+ft-show-colon: false
+ft-layout-builder: false
+classes:
+  region: {  }
+  field: {  }
+use_field_names: true
