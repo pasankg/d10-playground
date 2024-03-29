@@ -1,4 +1,4 @@
-uuid: e0333821-ac03-401b-8fce-b7e5bbb9bfd4
+uuid: 2d19638c-c40b-4e88-987e-4436f1bb783c
 langcode: en
 status: true
 dependencies:
@@ -14,7 +14,7 @@ dependencies:
     module:
       - media_library
 _core:
-  default_config_hash: 0WeWvFAfYGQRUX2FROBExMK5TQDkcqPpPnUZdT4Hy7k
+  default_config_hash: iFhkNhGoobQ7V0PJEH_Io9Vlli35kiaeQfdqUttfQeU
 id: media_library
 label: 'Media library'
 module: views
@@ -915,7 +915,6 @@ display:
           default_argument_type: fixed
           default_argument_options:
             argument: ''
-          default_argument_skip_url: false
           summary_options:
             base_path: ''
             count: true
@@ -1206,7 +1205,6 @@ display:
           default_argument_type: fixed
           default_argument_options:
             argument: ''
-          default_argument_skip_url: false
           summary_options:
             base_path: ''
             count: true

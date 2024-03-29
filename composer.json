@@ -16,9 +16,11 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.4",
         "drupal/bootstrap_barrio": "^5.5",
         "drupal/bootstrap_library": "^2.0",
+        "drupal/components": "^3.0@beta",
         "drupal/config_ignore": "^2.4",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-project-message": "^10.1",
@@ -42,7 +44,8 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true
         },
         "sort-packages": true
     },
@@ -50,6 +53,15 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
+            }
+        },
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "enable-patching": "true",
+        "patches": {
+            "drupal/core": {
+                "Olivero: Center align content (instead of left align)" : "https://git.drupalcode.org/project/drupal/-/merge_requests/3447.patch"
             }
         },
         "installer-paths": {

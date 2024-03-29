@@ -1,4 +1,4 @@
-uuid: 826e7562-6b74-4e65-b77d-ca7141912d19
+uuid: b78787a4-c6af-4986-910b-061ccfb28f6a
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,39 @@ dependencies:
     - block_content.type.basic
     - field.field.block_content.basic.body
   module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          f1fdc2bb-3cea-4da4-8b8f-e4ab278917e9:
+            uuid: f1fdc2bb-3cea-4da4-8b8f-e4ab278917e9
+            region: content
+            configuration:
+              id: 'field_block:block_content:basic:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
 _core:
   default_config_hash: hBNNDTFwakREOTa6GGMqN899Iyrii0hInwSJtQ7Kj30
 id: block_content.basic.default

@@ -1,4 +1,4 @@
-uuid: 8b962855-1c05-41f4-8d2b-49d9738b5fae
+uuid: a7acaa5d-f4d3-4d71-9f95-e285f91269dd
 langcode: en
 status: false
 dependencies:
@@ -12,5 +12,6 @@ _core:
   default_config_hash: 9KZ3WmwficPZQW4KRu0DdKX2V9A1Xiz5LFFm2NHg4_A
 id: node.revision
 label: Revision
+description: ''
 targetEntityType: node
 cache: true

@@ -1,4 +1,4 @@
-uuid: 1a3e159d-f9af-47ff-86a0-f73bce7e466a
+uuid: 7061865d-7d54-4b64-87d0-00f792bfe1e4
 langcode: en
 status: true
 dependencies:
@@ -6,6 +6,14 @@ dependencies:
     - core.entity_form_mode.media.media_library
     - field.field.media.audio.field_media_audio_file
     - media.type.audio
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: 28vwMIYtvyjPcD4RyciZXIztxtZgmuWRCNgYemr_SZE
 id: media.audio.media_library

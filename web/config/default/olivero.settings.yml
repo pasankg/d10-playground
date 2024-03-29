@@ -8,10 +8,12 @@ features:
   favicon: true
   node_user_picture: false
 logo:
+  path: ''
   use_default: false
 third_party_settings:
   shortcut:
     module_link: true
 mobile_menu_all_widths: 0
+center_align_layout: 1
 site_branding_bg_color: default
 base_primary_color: '#1b9ae4'
