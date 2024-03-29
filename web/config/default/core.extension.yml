@@ -74,4 +74,5 @@ module:
 theme:
   olivero: 0
   claro: 0
+  playground: 0
 profile: standard

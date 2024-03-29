@@ -51,3 +51,5 @@ web/themes/contrib/
 .ddev/
 .idea/
 web/info.php
+
+web/libraries/bootstrap

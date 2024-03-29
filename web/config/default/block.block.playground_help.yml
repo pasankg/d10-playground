@@ -1,0 +1,22 @@
+uuid: 3bb52092-66c2-4420-b25e-0ea94ef46ba9
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - playground
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: playground_help
+theme: playground
+region: sidebar_first
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }
