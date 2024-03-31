@@ -37,6 +37,7 @@ module:
   history: 0
   image: 0
   jsonapi: 0
+  jsonapi_extras: 0
   layout_builder: 0
   layout_discovery: 0
   link: 0
@@ -50,6 +51,7 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  playground_menu: 0
   responsive_image: 0
   rest: 0
   search: 0

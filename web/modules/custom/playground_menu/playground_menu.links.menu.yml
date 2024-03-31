@@ -1,0 +1,6 @@
+playground_menu.profile:
+  route_name: playground_menu.profile
+  title: 'My Playground Account'
+  weight: -10
+  menu_name: account
+  class: Drupal\playground_menu\Plugin\Menu\MyAccountMenuLink

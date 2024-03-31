@@ -1,0 +1,5 @@
+name: Playground for menu
+type: module
+description: 'Provides custom menu functionality.'
+package: Playground modules
+core_version_requirement: ^9.4 || ^10

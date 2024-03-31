@@ -21,7 +21,8 @@
         "drupal/bootstrap_barrio": "^5.5",
         "drupal/bootstrap_library": "^2.0",
         "drupal/components": "^3.0@beta",
-        "drupal/config_ignore": "^2.4",
+        "drupal/config_filter": "^2.6",
+        "drupal/config_ignore": "^3.2",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
@@ -29,6 +30,7 @@
         "drupal/devel_kint_extras": "^1.1",
         "drupal/ds": "^3.15",
         "drupal/field_group": "^3.4",
+        "drupal/jsonapi_extras": "^3.24",
         "drupal/twig_tweak": "^3.2",
         "drupal/webprofiler": "^10.1",
         "drush/drush": "^12.1"

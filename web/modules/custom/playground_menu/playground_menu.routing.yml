@@ -1,0 +1,6 @@
+playground_menu.profile:
+  path: '/user/{user}/account'
+  defaults:
+    _controller: '\Drupal\user\Controller\UserController::logout'
+  requirements:
+    _user_is_logged_in: 'TRUE'
