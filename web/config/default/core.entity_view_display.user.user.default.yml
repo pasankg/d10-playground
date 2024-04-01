@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_phone
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -53,6 +54,21 @@ third_party_settings:
                 entity: layout_builder.entity
             weight: 1
             additional: {  }
+          810bec0b-f0ed-439b-9bef-446063c3bd10:
+            uuid: 810bec0b-f0ed-439b-9bef-446063c3bd10
+            region: content
+            configuration:
+              id: 'field_block:user:user:field_phone'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: basic_string
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
         third_party_settings: {  }
 _core:
   default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
@@ -61,6 +77,13 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_phone:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
   member_for:
     settings: {  }
     third_party_settings: {  }

@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function playground_form_entity_type_alter(array &$entity_types) {
+  /** @var \Drupal\Core\Entity\EntityTypeInterface[] $entity_types */
+  $entity_types['user']->setFormClass('register', '\Drupal\playground_form\Form\NewRegisterForm');
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function _playground_menu_form_user_register_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['Suburb'] = [
+    '#type' => 'textfield',
+    '#title' => 'Suburb'
+  ];
+}

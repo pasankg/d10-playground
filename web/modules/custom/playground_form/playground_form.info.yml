@@ -1,5 +1,5 @@
-name: Playground for menus
+name: Playground for forms
 type: module
-description: 'Provides custom menu functionality.'
+description: 'Provides custom form functionality.'
 package: Playground modules
 core_version_requirement: ^9.4 || ^10

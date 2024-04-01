@@ -1,8 +1,9 @@
-uuid: b113722d-c113-4e5f-b792-ac88dee37b35
+uuid: d5e3cb6b-875d-4b00-862c-b7dd30c441d3
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.user.register
     - field.field.user.user.field_phone
     - field.field.user.user.user_picture
     - image.style.thumbnail
@@ -19,10 +20,10 @@ third_party_settings:
       label: ''
 _core:
   default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
-id: user.user.default
+id: user.user.register
 targetEntityType: user
 bundle: user
-mode: default
+mode: register
 content:
   account:
     weight: 0
@@ -36,18 +37,18 @@ content:
     third_party_settings: {  }
   field_phone:
     type: telephone_default
-    weight: 4
+    weight: 3
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   language:
-    weight: 2
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   timezone:
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }

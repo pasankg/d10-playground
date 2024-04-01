@@ -1,0 +1,49 @@
+<?php
+
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function playground_menu_form_menu_link_content_menu_link_content_form_alter(&$form, FormStateInterface $form_state, $form_id) {}
+
+/**
+ * Implements hook_menu_local_actions_alter().
+ */
+function playground_menu_menu_local_actions_alter(&$local_actions) {
+  $menu_list = \Drupal::entityTypeManager()->getStorage('menu_link_content')
+    ->loadByProperties(['menu_name' => 'account']);
+  $top_level = '';
+  $menu_title_exist = FALSE;
+  $menu_title = 'Programmatically Created';
+
+  foreach ($menu_list as $menu_item) {
+    $top_level = $menu_item->getParentId();
+    if ($menu_title === $menu_item->getTitle()) {
+      $menu_title_exist = TRUE;
+      break;
+    }
+  }
+
+  if (!$menu_title_exist) {
+    $menu_link = MenuLinkContent::create([
+      'title' => $menu_title,
+      'link' => [
+        'uri' => 'internal:/node/1',
+        'options' => [
+          'attributes' => [
+            'class' => ['new class'],
+            'target' => '_self',
+          ],
+        ],
+      ],
+      'menu_name' => 'account',
+      'parent' => $top_level,
+      'expanded' => TRUE,
+      'enabled' => FALSE,
+      'weight' => 0,
+    ]);
+    $menu_link->save();
+  }
+}

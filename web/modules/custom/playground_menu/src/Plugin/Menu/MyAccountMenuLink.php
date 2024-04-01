@@ -54,10 +54,10 @@ class MyAccountMenuLink extends MenuLinkDefault {
    */
   public function getTitle() {
     if ($this->currentUser->isAuthenticated()) {
-      return $this->t('Log out');
+      return $this->t('My Playground Account');
     }
     else {
-      return $this->t('Log in');
+      return $this->t('Create My Account');
     }
   }
 
@@ -66,11 +66,18 @@ class MyAccountMenuLink extends MenuLinkDefault {
    */
   public function getRouteName() {
     if ($this->currentUser->isAuthenticated()) {
-      return 'user.logout';
+      return 'playground_menu.profile';
     }
     else {
-      return 'user.login';
+      return 'user.register';
     }
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getRouteParameters() {
+    return $this->pluginDefinition['route_parameters'] += ['user' => $this->currentUser->id()];
   }
 
   /**

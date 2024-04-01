@@ -1,6 +1,12 @@
 playground_menu.profile:
   path: '/user/{user}/account'
   defaults:
-    _controller: '\Drupal\user\Controller\UserController::logout'
+    _controller: '\Drupal\playground_menu\Controller\UserController::userPage'
   requirements:
     _user_is_logged_in: 'TRUE'
+    _permission: 'view content'
+    user: \d+
+  options:
+    parameters:
+      user:
+        type: entity:user
