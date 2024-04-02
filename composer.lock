@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5c84cdc236740d06c7d39abd6f46aeb5",
+    "content-hash": "87a1af2ade0beb0ca67d43233c97bda3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -568,16 +568,16 @@
         },
         {
             "name": "consolidation/output-formatters",
-            "version": "4.3.2",
+            "version": "4.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/output-formatters.git",
-                "reference": "06711568b4cd169700ff7e8075db0a9a341ceb58"
+                "reference": "6812952176c5acc8ed44bdfa78fe93b745c18f25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/output-formatters/zipball/06711568b4cd169700ff7e8075db0a9a341ceb58",
-                "reference": "06711568b4cd169700ff7e8075db0a9a341ceb58",
+                "url": "https://api.github.com/repos/consolidation/output-formatters/zipball/6812952176c5acc8ed44bdfa78fe93b745c18f25",
+                "reference": "6812952176c5acc8ed44bdfa78fe93b745c18f25",
                 "shasum": ""
             },
             "require": {
@@ -616,9 +616,9 @@
             "description": "Format text by applying transformations provided by plug-in formatters.",
             "support": {
                 "issues": "https://github.com/consolidation/output-formatters/issues",
-                "source": "https://github.com/consolidation/output-formatters/tree/4.3.2"
+                "source": "https://github.com/consolidation/output-formatters/tree/4.4.0"
             },
-            "time": "2023-07-06T04:45:41+00:00"
+            "time": "2024-03-30T13:38:29+00:00"
         },
         {
             "name": "consolidation/robo",
@@ -809,16 +809,16 @@
         },
         {
             "name": "consolidation/site-process",
-            "version": "5.2.0",
+            "version": "5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/site-process.git",
-                "reference": "6c44638d7af8a8b4abe12c3180701243f480539d"
+                "reference": "5e8eff50fd0015e7ca0b6ce4082cacef012f2f77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/site-process/zipball/6c44638d7af8a8b4abe12c3180701243f480539d",
-                "reference": "6c44638d7af8a8b4abe12c3180701243f480539d",
+                "url": "https://api.github.com/repos/consolidation/site-process/zipball/5e8eff50fd0015e7ca0b6ce4082cacef012f2f77",
+                "reference": "5e8eff50fd0015e7ca0b6ce4082cacef012f2f77",
                 "shasum": ""
             },
             "require": {
@@ -860,9 +860,9 @@
             "description": "A thin wrapper around the Symfony Process Component that allows applications to use the Site Alias library to specify the target for a remote call.",
             "support": {
                 "issues": "https://github.com/consolidation/site-process/issues",
-                "source": "https://github.com/consolidation/site-process/tree/5.2.0"
+                "source": "https://github.com/consolidation/site-process/tree/5.3.0"
             },
-            "time": "2022-12-06T17:57:16+00:00"
+            "time": "2024-04-01T12:42:12+00:00"
         },
         {
             "name": "cweagans/composer-patches",
@@ -2279,17 +2279,17 @@
         },
         {
             "name": "drupal/ds",
-            "version": "3.19.0",
+            "version": "3.20.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ds.git",
-                "reference": "8.x-3.19"
+                "reference": "8.x-3.20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ds-8.x-3.19.zip",
-                "reference": "8.x-3.19",
-                "shasum": "7a1a4ded193ad8489c123a2f20ca2c7908c65eaa"
+                "url": "https://ftp.drupal.org/files/projects/ds-8.x-3.20.zip",
+                "reference": "8.x-3.20",
+                "shasum": "7daa28e565fa7746a662fc90505bed095ff24d3a"
             },
             "require": {
                 "drupal/core": "^10"
@@ -2301,8 +2301,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.19",
-                    "datestamp": "1707499881",
+                    "version": "8.x-3.20",
+                    "datestamp": "1711814947",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"

@@ -64,7 +64,8 @@
         "enable-patching": "true",
         "patches": {
             "drupal/core": {
-                "Olivero: Center align content (instead of left align)" : "https://git.drupalcode.org/project/drupal/-/merge_requests/3447.patch"
+                "Olivero: Center align content (instead of left align)" : "https://git.drupalcode.org/project/drupal/-/merge_requests/3447.patch",
+                "Deprecated function: strnatcasecmp(): Passing null to parameter #1 ($string1) of type string is deprecated in LayoutPluginManager": "https://git.drupalcode.org/project/drupal/-/merge_requests/6533.patch"
             }
         },
         "installer-paths": {

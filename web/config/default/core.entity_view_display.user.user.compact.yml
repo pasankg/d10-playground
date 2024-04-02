@@ -4,7 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_address
     - field.field.user.user.field_phone
+    - field.field.user.user.field_postcode
+    - field.field.user.user.field_suburb
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -65,5 +68,8 @@ content:
     weight: 0
     region: content
 hidden:
+  field_address: true
   field_phone: true
+  field_postcode: true
+  field_suburb: true
   member_for: true

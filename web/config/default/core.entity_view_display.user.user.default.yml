@@ -3,7 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_address
     - field.field.user.user.field_phone
+    - field.field.user.user.field_postcode
+    - field.field.user.user.field_suburb
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -69,6 +72,55 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 2
             additional: {  }
+          5644f3e6-42bf-499b-84b8-be74982a7316:
+            uuid: 5644f3e6-42bf-499b-84b8-be74982a7316
+            region: content
+            configuration:
+              id: 'field_block:user:user:field_address'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          0fb54493-7e51-43bc-8a1f-ed5aa117df25:
+            uuid: 0fb54493-7e51-43bc-8a1f-ed5aa117df25
+            region: content
+            configuration:
+              id: 'field_block:user:user:field_suburb'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          9bd70c07-0432-4970-9a50-460b1db026fa:
+            uuid: 9bd70c07-0432-4970-9a50-460b1db026fa
+            region: content
+            configuration:
+              id: 'field_block:user:user:field_postcode'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: number_integer
+                label: above
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
         third_party_settings: {  }
 _core:
   default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
@@ -77,12 +129,37 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_address:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
   field_phone:
     type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_postcode:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_suburb:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
     region: content
   member_for:
     settings: {  }
