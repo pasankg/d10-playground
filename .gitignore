@@ -53,3 +53,7 @@ web/themes/contrib/
 web/info.php
 
 web/libraries/bootstrap
+
+*.gz
+*.sql.gz
+*.sql
