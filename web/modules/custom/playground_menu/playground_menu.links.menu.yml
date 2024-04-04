@@ -1,5 +1,5 @@
 playground_menu.profile:
-  route_name: playground_menu.profile
+  route_name: playground_menu.profile_route
   title: 'My Playground Account'
   weight: -10
   menu_name: account

@@ -1,4 +1,4 @@
-playground_menu.profile:
+playground_menu.profile_route:
   path: '/user/{user}/account'
   defaults:
     _controller: '\Drupal\playground_menu\Controller\UserController::userPage'

@@ -66,7 +66,7 @@ class MyAccountMenuLink extends MenuLinkDefault {
    */
   public function getRouteName() {
     if ($this->currentUser->isAuthenticated()) {
-      return 'playground_menu.profile';
+      return 'playground_menu.profile_route';
     }
     else {
       return 'user.register';
