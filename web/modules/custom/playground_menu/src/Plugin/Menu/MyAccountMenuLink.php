@@ -77,7 +77,8 @@ class MyAccountMenuLink extends MenuLinkDefault {
    * {@inheritdoc}
    */
   public function getRouteParameters() {
-    return $this->pluginDefinition['route_parameters'] += ['user' => $this->currentUser->id()];
+    return $this->currentUser->isAuthenticated() ?
+      ($this->pluginDefinition['route_parameters'] += ['user' => $this->currentUser->id()]) : [];
   }
 
   /**
