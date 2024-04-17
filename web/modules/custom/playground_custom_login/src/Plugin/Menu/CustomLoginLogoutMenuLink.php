@@ -56,7 +56,7 @@ class CustomLoginLogoutMenuLink extends LoginLogoutMenuLink {
    */
   public function getTitle() {
     if ($this->currentUser->isAuthenticated()) {
-      return $this->t('Log out');
+      return $this->t('Sign out');
     }
     else {
       return $this->t('Sign in');
