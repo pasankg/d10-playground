@@ -1,4 +1,4 @@
-user.logout:
+playground_custom_login.logout:
   weight: 10
   menu_name: account
   class: Drupal\playground_custom_login\Plugin\Menu\CustomLoginLogoutMenuLink
