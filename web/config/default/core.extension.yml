@@ -52,6 +52,7 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  playground_custom_login: 0
   playground_form: 0
   playground_menu: 0
   responsive_image: 0

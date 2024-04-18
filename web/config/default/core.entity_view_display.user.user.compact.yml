@@ -5,7 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.user.compact
     - field.field.user.user.field_address
+    - field.field.user.user.field_age
+    - field.field.user.user.field_area_of_expertise
+    - field.field.user.user.field_date_of_birth
     - field.field.user.user.field_phone
+    - field.field.user.user.field_please_specify
     - field.field.user.user.field_postcode
     - field.field.user.user.field_suburb
     - field.field.user.user.user_picture
@@ -23,6 +27,7 @@ third_party_settings:
       label: ''
   layout_builder:
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: layout_onecol
@@ -69,7 +74,11 @@ content:
     region: content
 hidden:
   field_address: true
+  field_age: true
+  field_area_of_expertise: true
+  field_date_of_birth: true
   field_phone: true
+  field_please_specify: true
   field_postcode: true
   field_suburb: true
   member_for: true

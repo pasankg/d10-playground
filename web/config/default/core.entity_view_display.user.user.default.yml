@@ -4,16 +4,22 @@ status: true
 dependencies:
   config:
     - field.field.user.user.field_address
+    - field.field.user.user.field_age
+    - field.field.user.user.field_area_of_expertise
+    - field.field.user.user.field_date_of_birth
     - field.field.user.user.field_phone
+    - field.field.user.user.field_please_specify
     - field.field.user.user.field_postcode
     - field.field.user.user.field_suburb
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
+    - datetime
     - field_layout
     - image
     - layout_builder
     - layout_discovery
+    - options
     - user
 third_party_settings:
   field_layout:
@@ -121,6 +127,70 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 5
             additional: {  }
+          9ab33581-b389-409b-ab50-0657880b6098:
+            uuid: 9ab33581-b389-409b-ab50-0657880b6098
+            region: content
+            configuration:
+              id: 'field_block:user:user:field_area_of_expertise'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          fbf8ec5e-be08-4d9d-9dae-fd1f881b3d82:
+            uuid: fbf8ec5e-be08-4d9d-9dae-fd1f881b3d82
+            region: content
+            configuration:
+              id: 'field_block:user:user:field_please_specify'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          5b67b5d4-546c-45b2-aca1-bfe71a1b7699:
+            uuid: 5b67b5d4-546c-45b2-aca1-bfe71a1b7699
+            region: content
+            configuration:
+              id: 'field_block:user:user:field_date_of_birth'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: datetime_default
+                label: above
+                settings:
+                  timezone_override: ''
+                  format_type: medium
+                third_party_settings: {  }
+            weight: 8
+            additional: {  }
+          a2c74a10-a264-4976-bce1-58af335540b6:
+            uuid: a2c74a10-a264-4976-bce1-58af335540b6
+            region: content
+            configuration:
+              id: 'field_block:user:user:field_age'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 9
+            additional: {  }
         third_party_settings: {  }
 _core:
   default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
@@ -137,12 +207,44 @@ content:
     third_party_settings: {  }
     weight: 7
     region: content
+  field_age:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_area_of_expertise:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_date_of_birth:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 12
+    region: content
   field_phone:
     type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_please_specify:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
     region: content
   field_postcode:
     type: number_integer

@@ -1,0 +1,20 @@
+uuid: 762087c8-942d-41f1-8e07-a1a9ba2ad823
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_age
+  module:
+    - user
+id: user.user.field_age
+field_name: field_age
+entity_type: user
+bundle: user
+label: Age
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

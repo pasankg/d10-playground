@@ -1,0 +1,21 @@
+uuid: 680f81b3-bccf-4a17-ab97-82cfa232d7d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_area_of_expertise
+  module:
+    - options
+    - user
+id: user.user.field_area_of_expertise
+field_name: field_area_of_expertise
+entity_type: user
+bundle: user
+label: 'Area of expertise'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

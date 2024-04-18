@@ -1,0 +1,33 @@
+uuid: a6ef37f1-8473-477f-9928-369ccc5edf51
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_area_of_expertise
+field_name: field_area_of_expertise
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: commerce
+      label: Commerce
+    -
+      value: information_technology
+      label: 'Information Technology'
+    -
+      value: media
+      label: Media
+    -
+      value: other
+      label: Other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
