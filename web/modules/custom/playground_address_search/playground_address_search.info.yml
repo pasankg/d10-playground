@@ -1,0 +1,6 @@
+type: module
+core_version_requirement: ^9 || ^10
+name: Playground Address Search
+description: This module provides a service, field widget to search for addresses.
+package: Playground modules
+configure: playground_address_search.settings

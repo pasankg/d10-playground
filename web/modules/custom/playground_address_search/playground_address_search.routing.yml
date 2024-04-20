@@ -1,0 +1,7 @@
+playground_address_search.settings:
+  path: '/admin/config/services/address_search'
+  defaults:
+    _form: '\Drupal\playground_address_search\Form\ConfigForm'
+    _title: 'Address Search Service Configs'
+  requirements:
+    _permission: 'administer playground address search settings'

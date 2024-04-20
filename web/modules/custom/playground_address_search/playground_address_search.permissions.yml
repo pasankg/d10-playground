@@ -1,0 +1,4 @@
+administer playground address search settings:
+  title: 'Administer Playground Address Search Settings'
+  description: 'Administer Address Search API settings.'
+  restrict access: TRUE

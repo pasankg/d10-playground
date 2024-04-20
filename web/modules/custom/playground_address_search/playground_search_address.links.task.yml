@@ -1,0 +1,5 @@
+playground_address_search.settings:
+  title: 'Playground Address Search Service API Settings'
+  description: 'Edit the Rapid API settings here. More at <a href="https://github.com/mountain-pass/addressr">addressr</a>'
+  parent: system.admin_config_services
+  route_name: playground_address_search.settings

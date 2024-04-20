@@ -1,0 +1,12 @@
+playground_address_search.settings:
+  type: config_object
+  label: 'Address Search Service API Settings'
+  mapping:
+    rapid_api_key:
+      type: string
+      label: 'RapidAPI Key'
+      description: 'This is used for the request X-RapidAPI-Key header.'
+    rapid_api_host:
+      type: string
+      label: 'RapidAPI Host'
+      description: 'This is used for the request X-RapidAPI-Host header.'
