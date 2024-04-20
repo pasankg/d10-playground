@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.user.register
+    - field.field.user.user.field_about_me
     - field.field.user.user.field_address
     - field.field.user.user.field_age
     - field.field.user.user.field_area_of_expertise
@@ -39,61 +40,19 @@ content:
     settings: {  }
     third_party_settings: {  }
   contact:
-    weight: 12
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_address:
-    type: string_textfield
-    weight: 7
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_age:
-    type: string_textfield
-    weight: 3
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_area_of_expertise:
-    type: options_select
-    weight: 4
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_date_of_birth:
-    type: datetime_default
+  field_about_me:
+    type: string_textarea
     weight: 2
     region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_phone:
-    type: telephone_default
-    weight: 6
-    region: content
     settings:
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_please_specify:
-    type: string_textfield
-    weight: 5
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_postcode:
-    type: number
-    weight: 9
-    region: content
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-  field_suburb:
+  field_address:
     type: string_textfield
     weight: 8
     region: content
@@ -101,13 +60,63 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_age:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_area_of_expertise:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date_of_birth:
+    type: datetime_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_phone:
+    type: telephone_default
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_please_specify:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_postcode:
+    type: number
+    weight: 10
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_suburb:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   language:
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   timezone:
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }

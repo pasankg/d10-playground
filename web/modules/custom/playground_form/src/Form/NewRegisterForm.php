@@ -3,7 +3,7 @@
 namespace Drupal\playground_form\Form;
 
 use Drupal\Core\Ajax\AjaxResponse;
-use Drupal\Core\Ajax\HtmlCommand;
+use Drupal\Core\Ajax\AppendCommand;
 use Drupal\user\RegisterForm;
 use Drupal\Core\Form\FormStateInterface;
 
@@ -20,14 +20,23 @@ class NewRegisterForm extends RegisterForm {
     $form = parent::form($form, $form_state);
 
     $form['field_address']['widget'][0]['value']['#placeholder'] = 'Please enter your address.';
-    $form['field_address']['widget'][0]['value']['#maxlength'] = 300;
-    $form['field_address']['widget'][0]['value']['#description'] = 'Hello';
-    $form['field_address']['widget'][0]['value'] ['#ajax'] = [
+    $form['field_address']['widget'][0]['value']['#description'] = '';
+    //    $form['field_address']['widget'][0]['value'] ['#ajax'] = [
+    //      'callback' => [$this, 'countCharactersAjaxCallback'],
+    //      'disable-refocus' => FALSE,
+    //      'event' => 'change',
+    //      'progress' => [
+    //        'type' => 'throbber',
+    //        'message' => $this->t('Calculating entry...'),
+    //      ],
+    //    ];
+
+    $form['field_about_me']['widget'][0]['value']['#description'] = '';
+    $form['field_about_me']['widget'][0]['value']['#maxlength'] = 300;
+    $form['field_about_me']['widget'][0]['value']['#ajax'] = [
       'callback' => [$this, 'countCharactersAjaxCallback'],
-      'disable-refocus' => FALSE,
-      'event' => 'keyup',
-      'wrapper' => 'edit-field-address-0-value--description',
-      // wrapper element is updated with this AJAX callback.
+      'disable-refocus' => TRUE,
+      'event' => 'change',
       'progress' => [
         'type' => 'throbber',
         'message' => $this->t('Calculating entry...'),
@@ -35,7 +44,6 @@ class NewRegisterForm extends RegisterForm {
     ];
 
     $form['field_postcode']['widget'][0]['value']['#maxlength'] = 4;
-
     return $form;
   }
 
@@ -49,10 +57,10 @@ class NewRegisterForm extends RegisterForm {
 
   public function countCharactersAjaxCallback(array &$form, FormStateInterface $form_state) {
     $response = new AjaxResponse();
-    $size = strlen($form_state->getValue('field_address')[0]['value']);
-    $max_size = $form['field_address']['widget'][0]['value']['#maxlength'];
-    $text = '%d out of %d used.';
-    $response->addCommand(new HtmlCommand('#edit-field-address-0-value--description', sprintf($text, $size, $max_size)));
+    $size = strlen($form_state->getValue('field_about_me')[0]['value']);
+    $max_size = $form['field_about_me']['widget'][0]['value']['#maxlength'];
+    $text = '%d out of %d characters used.';
+    $response->addCommand(new AppendCommand('.form-item-field-about-me-0-value ', '<label>' . sprintf($text, $size, $max_size) . '</label>'));
     return $response;
   }
 

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_about_me
     - field.field.user.user.field_address
     - field.field.user.user.field_age
     - field.field.user.user.field_area_of_expertise
@@ -191,6 +192,21 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 9
             additional: {  }
+          3a2b829f-2f04-4469-a149-46d760a6d507:
+            uuid: 3a2b829f-2f04-4469-a149-46d760a6d507
+            region: content
+            configuration:
+              id: 'field_block:user:user:field_about_me'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: basic_string
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 10
+            additional: {  }
         third_party_settings: {  }
 _core:
   default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
@@ -199,6 +215,13 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_about_me:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
   field_address:
     type: string
     label: above

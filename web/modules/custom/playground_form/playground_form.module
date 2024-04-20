@@ -1,5 +1,9 @@
 <?php
 
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\InvokeCommand;
+use Drupal\Core\Form\FormStateInterface;
+
 /**
  * Implements hook_entity_type_alter().
  */
@@ -11,9 +15,41 @@ function playground_form_entity_type_alter(array &$entity_types) {
 /**
  * Implements hook_form_FORM_ID_alter().
  */
-function _playground_menu_form_user_register_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  $form['Suburb'] = [
-    '#type' => 'textfield',
-    '#title' => 'Suburb'
+function playground_form_user_register_form_alter(&$form, FormStateInterface $form_state, $form_id) {}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function playground_menu_form_user_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Make Age field read only for users.
+  $form['field_age']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+  $form['field_age']['widget'][0]['value']['#attributes']['class'][] = 'readonly';
+
+  // Add Ajax callback for DOB field to calculate Age.
+  $form['field_date_of_birth']['widget'][0]['value'] += [
+    '#ajax' => [
+      'callback' => 'calculate_age',
+      'event' => 'focusout',
+      'disable-refocus' => TRUE,
+      'progress' => [
+        'type' => 'throbber',
+        'message' => 'Calculating age',
+      ],
+    ],
   ];
+}
+
+/**
+ * Get age when DOB provided.
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *
+ * @return \Drupal\Core\Ajax\AjaxResponse
+ */
+function calculate_age($form, FormStateInterface $form_state): AjaxResponse {
+  $response = new AjaxResponse();
+  $date = $form_state->getValue('field_date_of_birth')[0]['value']['date'];
+  $age = date_diff(date_create('today'), date_create($date), TRUE);
+  return $response->addCommand(new InvokeCommand('#edit-field-age-0-value', 'val', [$age->y]));
 }

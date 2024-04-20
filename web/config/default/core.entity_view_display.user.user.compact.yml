@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_about_me
     - field.field.user.user.field_address
     - field.field.user.user.field_age
     - field.field.user.user.field_area_of_expertise
@@ -73,6 +74,7 @@ content:
     weight: 0
     region: content
 hidden:
+  field_about_me: true
   field_address: true
   field_age: true
   field_area_of_expertise: true
