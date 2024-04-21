@@ -25,14 +25,23 @@ class ConfigForm extends ConfigFormBase {
     $this->container = $container;
   }
 
+  /**
+   * {@inheritdoc}
+   */
   protected function getEditableConfigNames() {
     return ['playground_address_search.settings'];
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function getFormId() {
     return 'playground_address_search_settings_form';
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('config.factory'),
@@ -40,6 +49,9 @@ class ConfigForm extends ConfigFormBase {
     );
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('playground_address_search.settings');
     $form['rapid_api_key'] = [
@@ -59,6 +71,17 @@ class ConfigForm extends ConfigFormBase {
     ];
 
     return parent::buildForm($form, $form_state);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+    $this->config('playground_address_search.settings')
+      ->set('rapid_api_key', $form_state->getValue('rapid_api_key'))
+      ->set('rapid_api_host', $form_state->getValue('rapid_api_host'))
+      ->save();
+    parent::submitForm($form, $form_state);
   }
 
 }
