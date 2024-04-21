@@ -5,3 +5,10 @@ playground_address_search.settings:
     _title: 'Address Search Service Configs'
   requirements:
     _permission: 'administer playground address search settings'
+playground_address_search.autocomplete:
+  path: '/autocomplete/address'
+  defaults:
+    _controller: '\Drupal\playground_address_search\Controller\JsonApiAddressController::handleAutocomplete'
+    _format: json
+  requirements:
+    _permission: 'access content'
