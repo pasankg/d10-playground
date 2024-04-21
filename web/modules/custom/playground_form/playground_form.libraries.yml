@@ -1,0 +1,8 @@
+form-js:
+  version: 1.0
+  js:
+    js/playground-form.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once

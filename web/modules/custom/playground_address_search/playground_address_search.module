@@ -14,8 +14,7 @@ function playground_address_search_help($route_name, RouteMatchInterface $route_
           ->toString(),
         ':api' => 'https://github.com/mountain-pass/addressr',
       ];
-      $output = '';
-      $output .= '<h3>' . t('About') . '</h3>';
+      $output = '<h3>' . t('About') . '</h3>';
       $output .= '<p>' . t('Provides an Address search service.') . '</p>';
       $output .= '<p>' . t('API documentation can be found <a href=":api">here</a> and configuration is <a href=":config">here</a>', $variables) . '</p>';
 

@@ -3,3 +3,5 @@ type: module
 description: 'Provides custom form functionality.'
 package: Playground modules
 core_version_requirement: ^9.4 || ^10
+dependencies:
+  - playground_address_search:playground_address_search

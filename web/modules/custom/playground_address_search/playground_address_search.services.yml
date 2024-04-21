@@ -1,3 +1,4 @@
 services:
   playground_address_search.connection:
     class: Drupal\playground_address_search\Services\Connection
+    arguments: [ '@config.factory' ]
