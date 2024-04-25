@@ -10,13 +10,13 @@ function playground_address_search_help($route_name, RouteMatchInterface $route_
   switch ($route_name) {
     case 'help.page.playground_address_search':
       $variables = [
-        ':config' => Url::fromRoute('playground_address_search.settings')
-          ->toString(),
         ':api' => 'https://github.com/mountain-pass/addressr',
+        ':config' => Url::fromRoute('playground_address_search.settings_link')
+          ->toString(),
       ];
       $output = '<h3>' . t('About') . '</h3>';
       $output .= '<p>' . t('Provides an Address search service.') . '</p>';
-      $output .= '<p>' . t('API documentation can be found <a href=":api">here</a> and configuration is <a href=":config">here</a>', $variables) . '</p>';
+      $output .= '<p>' . t('API documentation can be found <a href=":api">here</a>', $variables) . '</p>';
 
       return $output;
   }

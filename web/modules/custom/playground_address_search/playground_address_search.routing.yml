@@ -1,4 +1,4 @@
-playground_address_search.settings:
+playground_address_search.settings_link:
   path: '/admin/config/services/address_search'
   defaults:
     _form: '\Drupal\playground_address_search\Form\ConfigForm'

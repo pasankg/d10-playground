@@ -25,6 +25,14 @@ class Connection {
     $this->rapid_api_key = $config->get('rapid_api_key') ?? NULL;
   }
 
+  /**
+   * Returns a list of addresses matching the search string.
+   *
+   * @param string $query
+   *    Address query to search.
+   *
+   * @return bool|string|true[]
+   */
   public function getAddresses(string $query) {
     $curl = curl_init();
 
