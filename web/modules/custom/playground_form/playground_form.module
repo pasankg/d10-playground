@@ -53,3 +53,29 @@ function calculate_age($form, FormStateInterface $form_state): AjaxResponse {
   $age = date_diff(date_create('today'), date_create($date), TRUE);
   return $response->addCommand(new InvokeCommand('#edit-field-age-0-value', 'val', [$age->y]));
 }
+
+/**
+ * Implements hook_field_group_form_process_alter().
+ */
+function playground_form_field_group_form_process_alter(array &$element, &$group, &$complete_form) {
+  if ($group->group_name === 'group_about_me') {
+    $element['#field_prefix'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'div',
+      '#value' => t('Please share a bit about you.'),
+      '#attributes' => [
+        'id' => 'about_me_group_prefix',
+      ],
+    ];
+  }
+  if ($group->group_name === 'group_contact_details') {
+    $element['#field_suffix'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'div',
+      '#value' => t('Don\'t worry, we won\'t subscribe you to our mailing list.'),
+      '#attributes' => [
+        'id' => 'contact_group_prefix',
+      ],
+    ];
+  }
+}

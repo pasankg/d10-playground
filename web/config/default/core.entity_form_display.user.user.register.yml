@@ -17,6 +17,7 @@ dependencies:
     - image.style.thumbnail
   module:
     - datetime
+    - field_group
     - field_layout
     - image
     - layout_discovery
@@ -27,6 +28,48 @@ third_party_settings:
     id: layout_onecol
     settings:
       label: ''
+  field_group:
+    group_about_me:
+      children:
+        - user_picture
+        - field_about_me
+        - field_date_of_birth
+        - field_age
+        - field_area_of_expertise
+        - field_please_specify
+      label: 'About me'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: about_me_group
+        description: ''
+        required_fields: true
+        formatter: closed
+        direction: vertical
+        width_breakpoint: 640
+        effect: bounceslide
+    group_contact_details:
+      children:
+        - field_phone
+        - field_address
+        - field_suburb
+        - field_postcode
+        - contact
+      label: 'Contact Details'
+      region: content
+      parent_name: ''
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: contact_group
+        description: ''
+        required_fields: true
 _core:
   default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
 id: user.user.register
@@ -40,7 +83,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   contact:
-    weight: 13
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -54,7 +97,7 @@ content:
     third_party_settings: {  }
   field_address:
     type: string_textfield
-    weight: 8
+    weight: 9
     region: content
     settings:
       size: 60
@@ -82,7 +125,7 @@ content:
     third_party_settings: {  }
   field_phone:
     type: telephone_default
-    weight: 7
+    weight: 8
     region: content
     settings:
       placeholder: ''
@@ -97,26 +140,26 @@ content:
     third_party_settings: {  }
   field_postcode:
     type: number
-    weight: 10
+    weight: 11
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_suburb:
     type: string_textfield
-    weight: 9
+    weight: 10
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   language:
-    weight: 12
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   timezone:
-    weight: 11
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }

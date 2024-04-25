@@ -3,7 +3,6 @@
 namespace Drupal\playground_address_search\Controller;
 
 use Drupal\Component\Utility\Xss;
-use Drupal\Core\Entity\Element\EntityAutocomplete;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
