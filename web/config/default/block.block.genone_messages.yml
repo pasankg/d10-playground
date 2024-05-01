@@ -1,0 +1,22 @@
+uuid: 13cc88d4-20bf-436b-b5b7-0805936bf415
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - genone
+_core:
+  default_config_hash: 0FgU29K9T5SWXeoRPUDir58tzhk9ZrrKr4c8Wx7KVlY
+id: genone_messages
+theme: genone
+region: highlighted
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

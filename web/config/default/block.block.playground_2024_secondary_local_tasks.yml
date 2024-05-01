@@ -1,0 +1,22 @@
+uuid: 0fc76fab-2b16-412b-9af7-17163bcb4fc1
+langcode: en
+status: true
+dependencies:
+  theme:
+    - playground_2024
+_core:
+  default_config_hash: ilfZ9Xp33OGOtHuMrryM1I546hxvQ5wjHLbpLVuwemQ
+id: playground_2024_secondary_local_tasks
+theme: playground_2024
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

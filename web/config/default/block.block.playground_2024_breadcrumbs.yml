@@ -1,0 +1,22 @@
+uuid: fd66a2ba-b4e5-43c2-ab70-bc349396dfa3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - playground_2024
+_core:
+  default_config_hash: z8kBWkVZKN0q84IBYZWJf4vY9t2JrgsWwTvMg1uor_8
+id: playground_2024_breadcrumbs
+theme: playground_2024
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

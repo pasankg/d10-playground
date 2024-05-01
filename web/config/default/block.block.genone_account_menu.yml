@@ -1,0 +1,27 @@
+uuid: 0fb4dec7-799d-4611-87ff-4939732a0f4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - genone
+_core:
+  default_config_hash: zos3AyworPiXq0aS9aakmbYDFQhtFRW15JrdQXr8hNY
+id: genone_account_menu
+theme: genone
+region: secondary_menu
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

@@ -1,9 +1,0 @@
-name: Playground
-type: theme
-description: 'A flexible Booststrap based theme, with many regions and a responsive, mobile-first layout.'
-core_version_requirement: ^9.4 || ^10
-base theme: olivero
-libraries:
-  - playground/global-styling
-
-ckeditor5-stylesheets: false

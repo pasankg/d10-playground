@@ -1,0 +1,22 @@
+uuid: 98ceb103-9719-41f0-a67c-bee1856f02e1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - genone
+_core:
+  default_config_hash: z8kBWkVZKN0q84IBYZWJf4vY9t2JrgsWwTvMg1uor_8
+id: genone_breadcrumbs
+theme: genone
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

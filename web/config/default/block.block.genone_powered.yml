@@ -1,0 +1,22 @@
+uuid: 5aaf0a72-7097-4c77-b141-2af1c71ab4c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - genone
+_core:
+  default_config_hash: O90pqyjFMCYmIexSsmlRGivsEEmJRmvOEUgalMGYKSo
+id: genone_powered
+theme: genone
+region: sidebar_first
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

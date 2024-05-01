@@ -1,0 +1,22 @@
+uuid: d21c431b-d380-4be4-a079-f193fe516270
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - playground_2024
+_core:
+  default_config_hash: 0FgU29K9T5SWXeoRPUDir58tzhk9ZrrKr4c8Wx7KVlY
+id: playground_2024_messages
+theme: playground_2024
+region: highlighted
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: fceadafc-aa7d-4d89-ab3d-73e20b6d8f76
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - genone
+_core:
+  default_config_hash: s33NmWmZh1EP4l3DrDOOXnWfM12hRzgYTXbl3leGuZ8
+id: genone_help
+theme: genone
+region: highlighted
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 34fa5dc4-5421-4a22-9a22-6a5a0cb5e035
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - playground_2024
+_core:
+  default_config_hash: O90pqyjFMCYmIexSsmlRGivsEEmJRmvOEUgalMGYKSo
+id: playground_2024_powered
+theme: playground_2024
+region: footer_fifth
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

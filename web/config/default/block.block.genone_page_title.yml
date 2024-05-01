@@ -1,0 +1,20 @@
+uuid: 2adb17aa-bd47-4884-b4c6-97dc062a4d45
+langcode: en
+status: true
+dependencies:
+  theme:
+    - genone
+_core:
+  default_config_hash: Sa0mRLTwOfklytPJzB1eSDROnycdKlhYaDcf0Ms4sdk
+id: genone_page_title
+theme: genone
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

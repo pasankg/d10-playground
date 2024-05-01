@@ -1,0 +1,20 @@
+uuid: 670dc930-dfac-4757-b9be-664cb8880d02
+langcode: en
+status: true
+dependencies:
+  theme:
+    - genone
+_core:
+  default_config_hash: AeScMoF0vzIh2fWFCKIR3gIrTuFOy0pX4TGvMw-yAIo
+id: genone_primary_admin_actions
+theme: genone
+region: content
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,23 @@
+name: GenOne
+type: theme
+'base theme': stable9
+starterkit: true
+version: 1.0.0
+libraries:
+  - genone/base
+  - genone/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - genone/user
+  core/drupal.dropbutton:
+    - genone/dropbutton
+  core/drupal.dialog:
+    - genone/dialog
+  file/drupal.file:
+    - genone/file
+  core/drupal.progress:
+    - genone/progress
+core_version_requirement: ^10
+generator: 'starterkit_theme:10.2.5'
+description: 'Created with core starterkit theme generator'

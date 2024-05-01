@@ -1,0 +1,22 @@
+uuid: 8bf3f671-f9eb-45cc-b852-b2400bce5281
+langcode: en
+status: true
+dependencies:
+  theme:
+    - genone
+_core:
+  default_config_hash: KuHCW8fg5Sq4SJ2lNkgnqzLhjis-UFYwACE980IEXc4
+id: genone_primary_local_tasks
+theme: genone
+region: content
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

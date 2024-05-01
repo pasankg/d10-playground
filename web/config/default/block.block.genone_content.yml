@@ -1,0 +1,22 @@
+uuid: 08042acc-24f1-44c4-bc2c-5c4ac2a6544f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - genone
+_core:
+  default_config_hash: sHLMkSoqgTM9vLDrCdO6IwT10BP_cQHZg8ZKst8DD88
+id: genone_content
+theme: genone
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

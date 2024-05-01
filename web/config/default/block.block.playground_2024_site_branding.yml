@@ -1,0 +1,25 @@
+uuid: c8b5e05b-c921-4d0d-81a1-8d047308ff44
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - playground_2024
+_core:
+  default_config_hash: VJtJwh-mRBIJMhjbctI1VyHTvFJSwbq9TC-tRe63SVY
+id: playground_2024_site_branding
+theme: playground_2024
+region: header
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

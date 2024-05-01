@@ -1,0 +1,23 @@
+uuid: c2fe43cc-25fb-4ddf-9914-8e6f1af320a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - playground_2024
+_core:
+  default_config_hash: ibJVING7nWJntzvlvfYoZPDDZnw1IHO1JnLaMOAtFhc
+id: playground_2024_search_form_narrow
+theme: playground_2024
+region: sidebar_first
+weight: -7
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

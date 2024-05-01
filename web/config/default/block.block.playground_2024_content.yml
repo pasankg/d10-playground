@@ -1,0 +1,22 @@
+uuid: 1a9916af-1d24-405c-9d3b-5d4f1b123b2e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - playground_2024
+_core:
+  default_config_hash: sHLMkSoqgTM9vLDrCdO6IwT10BP_cQHZg8ZKst8DD88
+id: playground_2024_content
+theme: playground_2024
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

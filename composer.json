@@ -124,6 +124,14 @@
         "post-drupal-scaffold-cmd": [
             "mkdir -p web/libraries/bootstrap",
             "cp -R vendor/twbs/bootstrap/dist web/libraries/bootstrap"
+        ],
+        "post-install-cmd": [
+            "@composer post-drupal-scaffold-cmd"
+        ],
+        "post-update-cmd": [
+            "@composer post-drupal-scaffold-cmd",
+            "mkdir -p web/libraries/bootstrap",
+            "cp -R vendor/twbs/bootstrap/dist web/libraries/bootstrap"
         ]
     }
 }

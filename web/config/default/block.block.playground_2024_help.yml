@@ -1,0 +1,22 @@
+uuid: c5a2e40e-565b-41f9-82bc-1b9fc85308dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - playground_2024
+_core:
+  default_config_hash: s33NmWmZh1EP4l3DrDOOXnWfM12hRzgYTXbl3leGuZ8
+id: playground_2024_help
+theme: playground_2024
+region: highlighted
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

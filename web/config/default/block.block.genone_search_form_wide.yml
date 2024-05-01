@@ -1,0 +1,23 @@
+uuid: d6de8534-c247-4a90-acdb-e8611466ca3b
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - genone
+_core:
+  default_config_hash: SBzOo5cwEoJ-eSZ_4poBNU3illUshcNqbDn026IBgRY
+id: genone_search_form_wide
+theme: genone
+region: sidebar_first
+weight: -7
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

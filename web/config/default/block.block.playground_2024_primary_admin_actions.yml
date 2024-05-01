@@ -1,0 +1,20 @@
+uuid: 11902f0d-c3a3-40dd-abf4-1d5fc810dcc4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - playground_2024
+_core:
+  default_config_hash: AeScMoF0vzIh2fWFCKIR3gIrTuFOy0pX4TGvMw-yAIo
+id: playground_2024_primary_admin_actions
+theme: playground_2024
+region: content
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }
