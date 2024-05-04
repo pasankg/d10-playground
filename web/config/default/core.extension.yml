@@ -24,6 +24,7 @@ module:
   datetime_range: 0
   dblog: 0
   devel: 0
+  devel_generate: 0
   devel_kint_extras: 0
   ds_switch_view_mode: 0
   dynamic_page_cache: 0
@@ -69,6 +70,7 @@ module:
   taxonomy: 0
   telephone: 0
   text: 0
+  token: 0
   toolbar: 0
   twig_tweak: 0
   update: 0
@@ -76,6 +78,7 @@ module:
   views_ui: 0
   workspaces: 0
   ds: 1
+  pathauto: 1
   ds_extras: 2
   views: 10
   standard: 1000
