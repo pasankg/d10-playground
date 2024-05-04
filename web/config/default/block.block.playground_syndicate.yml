@@ -1,0 +1,23 @@
+uuid: f643de09-e738-4a76-9a3a-4e57acf3ed55
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - playground
+_core:
+  default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
+id: playground_syndicate
+theme: playground
+region: sidebar_first
+weight: 0
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'RSS feed'
+  label_display: '0'
+  provider: node
+  block_count: 10
+visibility: {  }

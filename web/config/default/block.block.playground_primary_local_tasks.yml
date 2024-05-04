@@ -1,0 +1,22 @@
+uuid: 9e1dcde9-6153-4c5e-8d7b-6a7d4315a56a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - playground
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: playground_primary_local_tasks
+theme: playground
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

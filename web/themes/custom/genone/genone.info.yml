@@ -2,7 +2,7 @@ name: GenOne
 type: theme
 'base theme': stable9
 starterkit: true
-version: 1.0.0
+version: VERSION
 libraries:
   - genone/base
   - genone/messages
