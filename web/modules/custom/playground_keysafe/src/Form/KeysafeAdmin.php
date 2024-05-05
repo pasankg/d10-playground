@@ -91,7 +91,7 @@ class KeysafeAdmin extends FormBase {
     $key = trim($form_state->getValue('keysafe_key'));
 
     if ($this->keysafeManager->keyExists($key)) {
-      $form_state->setErrorByName('keysafe_key', $this->t('This Key already exists.'));
+      $form_state->setErrorByName('keysafe_key', $this->t('This Key %key already exists.', ['%key' => $key]));
     }
     if (!preg_match('/^[a-z0-9_]+$/', $key)) {
       $form_state->setErrorByName('keysafe_key', $this->t('Please use only a mix of lowercase alphabet, numbers and _ characters.'));
