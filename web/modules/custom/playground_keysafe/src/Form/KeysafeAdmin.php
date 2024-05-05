@@ -10,6 +10,9 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class KeysafeAdmin extends FormBase {
 
+  /**
+   * @var PlaygroundKeyManagerInterface
+   */
   protected PlaygroundKeyManagerInterface $keysafeManager;
 
   public function __construct(PlaygroundKeyManagerInterface $keysafe_manager) {
@@ -22,7 +25,6 @@ class KeysafeAdmin extends FormBase {
   public static function create(ContainerInterface $container) {
     return new static($container->get('playground_keysafe.manager'));
   }
-
 
   public function getFormId() {
     return 'keysafe_admin_form';
@@ -64,7 +66,7 @@ class KeysafeAdmin extends FormBase {
       '#maxlength' => 255,
       '#default_value' => '',
       '#required' => TRUE,
-      '#description' => $this->t('Enter a Value, typically an API Value.'),
+      '#description' => $this->t('Enter a Value, typically an API secret.'),
     ];
     $form['actions'] = ['#type' => 'actions'];
     $form['actions']['submit'] = [
@@ -96,14 +98,18 @@ class KeysafeAdmin extends FormBase {
     }
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $key = trim($form_state->getValue('keysafe_key'));
     $value = trim($form_state->getValue('keysafe_value'));
     $result = $this->keysafeManager->setKey($key, $value);
     if (!is_null($result)) {
       $this->messenger()->addStatus($this->t('The Key %key has been added.', ['%key' => $key]));
-      $form_state->setRedirect('playground_keysafe.admin_page');
+    } else {
+      $this->messenger()->addError($this->t('Error adding Key %key.', ['%key' => $key]));
     }
-
+    $form_state->setRedirect('playground_keysafe.admin_page');
   }
 }
