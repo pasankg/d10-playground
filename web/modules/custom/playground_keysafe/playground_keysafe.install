@@ -45,6 +45,12 @@ function playground_keysafe_schema() {
  * Implements hook_uninstall().
  */
 function playground_keysafe_uninstall($is_syncing) {
-//  $db_connection = \Drupal::database();
-//  $db_connection->schema()->dropTable('playground_keysafe');
+  /*
+    No need for manual schema deletion.
+    According to web/core/lib/Drupal/Core/Database/database.api.php;
+      The tables declared by schema hook will be automatically created when the
+      module is installed, and removed when the module is uninstalled. This happens
+      before hook_install() is invoked, and after hook_uninstall() is invoked,
+      respectively.
+  */
 }

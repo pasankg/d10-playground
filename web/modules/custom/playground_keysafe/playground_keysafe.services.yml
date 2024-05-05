@@ -1,0 +1,5 @@
+services:
+  playground_keysafe.manager:
+    class: Drupal\playground_keysafe\PlaygroundKeySafeManager
+    arguments: ['@database']
+  Drupal\ban\BanIpManagerInterface: '@playground_keysafe.manager'

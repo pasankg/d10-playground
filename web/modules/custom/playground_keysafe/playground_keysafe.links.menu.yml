@@ -1,0 +1,6 @@
+playground_keysafe.admin_page:
+  title: 'Playground Keysafe'
+  description: 'Stored keys.'
+  route_name: playground_keysafe.admin_page
+  weight: 10
+  parent: system.admin_config_system

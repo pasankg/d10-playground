@@ -1,0 +1,16 @@
+playground_keysafe.admin_page:
+  path: '/admin/config/system/keysafe/{default_key}'
+  defaults:
+    _form: '\Drupal\playground_keysafe\Form\KeysafeAdmin'
+    _title: 'Keysafe Keys'
+    default_key: ''
+  requirements:
+    _permission: 'keysafe key admin'
+
+playground_keysafe.delete:
+  path: '/admin/config/system/keysafe/delete/{keysafe_id}'
+  defaults:
+    _form: '\Drupal\playground_keysafe\Form\KeysafeDelete'
+    _title: 'Delete key'
+  requirements:
+    _permission: 'keysafe key admin'

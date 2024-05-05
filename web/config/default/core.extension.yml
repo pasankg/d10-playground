@@ -58,6 +58,7 @@ module:
   playground_address_search: 0
   playground_custom_login: 0
   playground_form: 0
+  playground_keysafe: 0
   playground_menu: 0
   responsive_image: 0
   rest: 0
