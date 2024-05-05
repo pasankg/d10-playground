@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the playground keysafe module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function playground_keysafe_schema() {
+  $schema['playground_keysafe'] = [
+    'description' => 'Stores Keys.',
+    'fields' => [
+      'iid' => [
+        'description' => 'Primary Key: unique ID for the keysafe.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'keysafe_key' => [
+        'description' => 'Keysafe Key',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'keysafe_value' => [
+        'description' => 'Keysafe Value',
+        'type' => 'varchar_ascii',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+    ],
+    'indexes' => [
+      'keysafe_key' => ['keysafe_key'],
+    ],
+    'primary key' => ['iid'],
+  ];
+  return $schema;
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function playground_keysafe_uninstall($is_syncing) {
+//  $db_connection = \Drupal::database();
+//  $db_connection->schema()->dropTable('playground_keysafe');
+}

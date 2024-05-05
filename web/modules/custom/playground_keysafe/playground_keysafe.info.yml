@@ -1,0 +1,5 @@
+name: Playground API key safe
+type: module
+description: 'Provides a form to save keys in the database'
+package: Playground modules
+core_version_requirement: ^9.4 || ^10
