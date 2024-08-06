@@ -1,0 +1,3 @@
+[submodule "web/themes/custom/playground/the-guardian"]
+	path = web/themes/custom/playground/the-guardian
+	url = https://github.com/pasankg/the-guardian.git
