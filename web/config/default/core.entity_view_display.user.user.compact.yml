@@ -83,4 +83,6 @@ hidden:
   field_please_specify: true
   field_postcode: true
   field_suburb: true
+  langcode: true
   member_for: true
+  search_api_excerpt: true

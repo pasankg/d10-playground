@@ -43,6 +43,7 @@ module:
   jsonapi: 0
   jsonapi_defaults: 0
   jsonapi_extras: 0
+  language: 0
   layout_builder: 0
   layout_discovery: 0
   link: 0
@@ -65,6 +66,8 @@ module:
   responsive_image: 0
   rest: 0
   search: 0
+  search_api: 0
+  search_api_solr: 0
   serialization: 0
   settings_tray: 0
   shortcut: 0
